@@ -1,0 +1,76 @@
+<h1 mat-dialog-title>Crear publicación</h1>
+<div mat-dialog-content>
+  <form [formGroup]="myForm">
+    <div class="form-content">
+      <mat-form-field>
+        <input
+          matInput
+          name="title"
+          placeholder="Titulo"
+          formControlName="title"
+        />
+        <mat-error *ngIf="myForm.get('title').hasError('required')">
+          Ingresa un titulo.
+        </mat-error>
+        <mat-error *ngIf="myForm.get('title').hasError('minlength')">
+          El titulo debe contener minimo 2 caracteres.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <textarea
+          matInput
+          name="description"
+          placeholder="Descripción"
+          formControlName="description"
+        ></textarea>
+        <mat-error *ngIf="myForm.get('description').hasError('required')">
+          Ingresa una descripción.
+        </mat-error>
+        <mat-error *ngIf="myForm.get('description').hasError('minlength')">
+          La descripción debe contener minimo 2 caracteres.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          type="number"
+          name="price"
+          placeholder="Precio"
+          formControlName="price"
+        />
+        <mat-error *ngIf="myForm.get('price').hasError('required')">
+          Ingresa un Precio.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          name="category"
+          placeholder="Categoria"
+          formControlName="category"
+        />
+        <mat-error *ngIf="myForm.get('category').hasError('required')">
+          Ingresa una categoria.
+        </mat-error>
+        <mat-error *ngIf="myForm.get('category').hasError('minlength')">
+          La Categoria debe contener minimo 2 caracteres.
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </form>
+</div>
+<div mat-dialog-actions class="justify-right">
+  <button mat-button (click)="onClose()">Cancelar</button>
+  <button
+    mat-flat-button
+    color="primary"
+    [disabled]="!myForm.valid"
+    (click)="onSubmit()"
+    cdkFocusInitial
+  >
+    Publicar
+  </button>
+</div>

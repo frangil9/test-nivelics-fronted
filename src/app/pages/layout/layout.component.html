@@ -1,0 +1,84 @@
+<div class="wrapper-library">
+  <h2>{{ data.test_title }}</h2>
+  <p class="list-library__description">{{ data.title_ppal }}</p>
+  <p class="list-library__description">{{ data.test_description }}.</p>
+  <p class="list-library__description">{{ data.title_testimony }}.</p>
+
+  <div class="content-list-library">
+    <h2>Articles</h2>
+    <div class="wrapper-col">
+      <div *ngFor="let item of data.articles_pymes_test" class="four-col">
+        <div class="general-module">
+          <img class="image-library" src="{{ item.image }}" />
+          <p class="list-library__title">
+            <a href="#"> {{ item.name }} </a>
+          </p>
+          <p class="list-library__description">
+            {{ item.description }}
+          </p>
+          <!-- <p class="list-library__aditional">5to Grade - Spanish</p> -->
+        </div>
+      </div>
+    </div>
+
+    <h2>Testimony</h2>
+    <div class="wrapper-col">
+      <div *ngFor="let item of data.testimony" class="four-col">
+        <div class="general-module">
+          <img class="image-library" src="{{ item.image }}" />
+          <p class="list-library__title">
+            <a href="#"> {{ item.title }} </a>
+          </p>
+          <p class="list-library__description">
+            {{ item.text }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Images</h2>
+    <div class="wrapper-col">
+      <div *ngFor="let item of data.what_images_test" class="four-col">
+        <div class="general-module">
+          <img class="image-library" src="{{ item.path_file }}" />
+
+          <p class="list-library__description">
+            {{ item.summary }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Categories</h2>
+    <div class="wrapper-col">
+      <div *ngFor="let item of data.categories">
+        <div class="wrapper-col">
+          <div class="two-col">
+            <div class="general-module">
+              <img class="image-library" src="{{ item.icon }}" />
+              <p class="list-library__title">
+                <a href="#"> {{ item.name }} </a>
+              </p>
+              <p class="list-library__description">
+                {{ item.slug }}
+              </p>
+            </div>
+          </div>
+          <div class="two-col">
+            <div class="wrapper-col">
+              <div *ngFor="let service of item.services" class="four-col">
+                <div class="general-module">
+                  <img class="image-library" src="{{ service.image }}" />
+                  <p class="list-library__title">
+                    <a href="#"> {{ service.name }} </a>
+                  </p>
+                  <p class="list-library__aditional">{{ service.price |currency }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

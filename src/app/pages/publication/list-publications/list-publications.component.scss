@@ -1,0 +1,98 @@
+.wrapper-table-homework {
+    margin: 1em 0;
+    width: 100%;
+}
+
+.wrapper-table-homework h1 {
+  font-weight: 800;
+  font-size: 20px;
+  margin: 0 0 1em 0;
+  border-bottom: 1px solid #DDD;
+  padding-bottom: 0.5em;
+}
+
+/******/
+
+table.content-table-homework {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 2em 0;
+}
+
+.content-table-homework tr:nth-of-type(odd) {
+  text-align: left;
+  vertical-align: top;
+  color: #2A426D;
+  font-size: 13px;
+}
+
+.content-table-homework tr {
+  border-bottom: 1px solid #EBEBEB;
+}
+
+.content-table-homework thead tr {
+  border-bottom: 0;
+}
+
+.content-table-homework th {
+  padding-bottom: 1em;
+}
+
+.content-table-homework td {
+  padding: 1em 0;
+  font-size: 16px;
+}
+
+.content-table-homework .table-homework--txt-matter {
+  font-size: 12px;
+  color: #9098AC;
+  margin: 0.25em 0;
+}
+
+.content-table-homework .table-homework--title {
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+}
+
+.content-table-homework .table-homework--date {
+  color: #9098AC;
+  font-size: 14px;
+}
+
+.content-table-homework .table-homework--name-matter {
+  font-size: 16px;
+  color: #000;
+}
+
+/* button */
+
+.button-table-homework {
+    font-weight: bold;
+    display: block;
+    border-radius: 50px;
+    padding: 0.8em;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #F2AF2B;
+    border: 1px solid #F2AF2B;
+    color: #FFF;
+    width: 100%;
+    cursor: pointer;
+}
+
+.button-table-homework:hover {
+    background-color: #b3bcbf;
+    border: 1px solid #b3bcbf;
+}
+
+.list-empty {
+  display: flex;
+  justify-content: center;
+  padding: 14px;
+  font-size: 14px;
+  font-style: italic;
+  color: #ffffff;
+}

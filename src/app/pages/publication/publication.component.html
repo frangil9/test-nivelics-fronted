@@ -1,0 +1,17 @@
+<div class="wrapper-forum">
+  <h1>Publications</h1>
+
+  <div class="content-forum">
+    <div class="content-forum__buttons">
+      <button
+        type="submit"
+        class="button-secondary"
+        (click)="openModalCreatePublication()"
+      >
+        <i class="fa fa-plus"></i>Add Publication
+      </button>
+    </div>
+
+    <app-list-publications [articles]="publications"></app-list-publications>
+  </div>
+</div>

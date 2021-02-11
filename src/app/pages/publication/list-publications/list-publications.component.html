@@ -1,0 +1,33 @@
+<div class="wrapper-table-homework">
+  <h1>List</h1>
+  <table class="content-table-homework">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Descripción</th>
+        <th>Fecha Creación</th>
+        <th>Precio</th>
+        <th>Categoría</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of articles">
+        <td data-column="">
+          <span class="table-homework--title">{{ item.title }}</span>
+        </td>
+        <td data-column="">
+          <span class="table-homework--title">{{ item.description }}</span>
+        </td>
+        <td data-column="">
+          <span class="table-homework--date"> {{ item.created | date: 'dd/MM/yyyy HH:mm' }}</span>
+        </td>
+        <td data-column="">
+          <span class="table-homework--title">{{ item.price | currency }}</span>
+        </td>
+        <td data-column="">
+          <span class="table-homework--title">{{ item.category }}</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

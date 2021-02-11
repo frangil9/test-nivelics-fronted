@@ -1,0 +1,119 @@
+.main-header--dashboard {
+  background: #27466C;
+  padding: 0.8em 1em;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+      position: relative; 
+}
+
+.main-header_GenialSkills-logo--dashboard {
+  width: 20%;
+}
+
+.main-header_GenialSkills-logo--dashboard img {
+  width: 85px;
+}
+
+
+/* Top Bar */
+
+.main-header_top-bar-menu--dashboard {
+  width: 90%;
+  text-align: right;
+}
+
+.top-bar-menu--dashboard {
+  font-size: 18px;
+  list-style: none;
+}
+
+.top-bar-menu--dashboard li {
+  padding: 0 0.5em;
+}
+
+.top-bar-menu--dashboard li, .top-bar-menu--dashboard li img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.top-bar-menu--dashboard li .fas {
+  margin-right: 10px;
+  font-size: 25px;
+  color: #FFF;
+}
+
+.top-bar-menu--dashboard li a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.top-bar-menu--dashboard li a:hover {
+  color: #FCAD2F;
+}
+
+.top-bar-menu--dashboard_select select {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: #FFF;
+  padding: 0 0.2em 0 0;
+  font-size: 18px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+.top-bar-menu--dashboard_select select:hover {
+  color: #FCAD2F;
+}
+
+
+
+/* MQ 750px */
+
+@media screen and (max-width: 750px) {
+  .main-header_GenialSkills-logo--dashboard img { width: 85px; }
+
+  .text-disabled {display: none;}
+
+  .top-bar-menu--dashboard { font-size: 14px; }
+
+  .top-bar-menu--dashboard li .fa-question-circle { font-size: 22px; }
+
+  .top-bar-menu--dashboard li .fa-globe { font-size: 15px; }
+
+  .top-bar-menu--dashboard_select select { font-size: 14px; }
+}
+
+/* MQ 500px */
+
+@media screen and (max-width: 500px) {
+  .main-header--dashboard {
+    -webkit-flex-wrap: wrap;
+              -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  }
+
+  .main-header_top-bar-menu--dashboard {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #212B75;
+    padding-top: 0.25em;
+    margin-top: 0.25em;
+  }
+
+  .main-header_GenialSkills-logo--dashboard { width: 100%; text-align: center; }
+  
+  .main-header_GenialSkills-logo--dashboard img {  width: 80px; }
+
+  .top-bar-menu--dashboard li .fa-globe { display: none; }
+
+  .main-header--dashboard {padding: 1em 0.25em;}
+}
